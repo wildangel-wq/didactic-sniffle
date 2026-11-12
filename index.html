@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Моя первая игра</title>
+  <style>
+    body {
+      background: #1e1e24;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #4e7ac7;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Очки: <span id="score">0</span></h1>
+  <button id="click-btn">Жми на меня!</button>
+
+  <script>
+    let score = 0;
+    const scoreDisplay = document.getElementById('score');
+    const clickBtn = document.getElementById('click-btn');
+
+    clickBtn.addEventListener('click', function() {
+      score = score + 300;
+      scoreDisplay.innerText = score;
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
